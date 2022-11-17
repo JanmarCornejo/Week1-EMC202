@@ -47,11 +47,7 @@ public class Movement : MonoBehaviour
             anim.Play("Jump");
         }
     }
-    public void TransformMovement()
-    {
-        float movementDir = Input.GetAxisRaw("Horizontal");
-        transform.position = new Vector2(transform.position.x + (MovementSpeed * movementDir * Time.deltaTime), transform.position.y);
-    }
+
     public void RigidbodyMovement()
     {
         float movementDir = Input.GetAxisRaw("Horizontal");
@@ -76,7 +72,6 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag.Equals("Enemy"))
         {
             collision.gameObject.transform.parent.gameObject.SetActive(false);
-            //Destroy(collision.gameObject);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
