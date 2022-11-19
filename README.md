@@ -1,5 +1,5 @@
-# Week1-EMC202
-Week 1 Project
+# Week2-EMC202
+Week 2 Project
 
 3 Main Classes of the Game:
 - Fighter : The high DPS class able to inflict more damage but sacrificing its defence, Has the ability to apply bleed on enemies.
