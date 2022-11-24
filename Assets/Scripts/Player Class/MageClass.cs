@@ -17,6 +17,6 @@ public class MageClass : BasePlayerClass
     public override void NormalAttack()
     {
         base.NormalAttack();
-        //Instead of punch, it is a simple magic missle
+        //Instead of punch, it is a simple magic missle animation
     }
 }

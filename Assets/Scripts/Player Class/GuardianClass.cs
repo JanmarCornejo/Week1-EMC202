@@ -19,16 +19,17 @@ public class GuardianClass : BasePlayerClass
     public override void NormalAttack()
     {
         base.NormalAttack();
-        //BashAnEnemyWithShieldInstead
+        //Bash AnEnemy With Shield Instead Animation
+
         //Has 0.8% Chance to inflict stun
         ChanceStun = Random.Range(0, 101);
-        if(ChanceStun <= 0.8)
+        if(ChanceStun <= 8)
         {
-            //Inflict Stun
+            //Inflict Stun on Enemy
         }
         else
         {
-            //normal damage
+            return;
         }
     }
 }

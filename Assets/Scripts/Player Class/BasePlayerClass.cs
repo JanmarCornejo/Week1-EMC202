@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class BasePlayerClass
 {
+    //Attributes
+
+    public Transform attackPoint;
+    public float Range = 0.5f;
+    public LayerMask enemyLayer;
+
+
+    //Class Name & Description
+
     private string characterClassName;
     private string characterClassDescription;
+
+
+    //STATS
 
     private int agility;
     private int endurance;
     private int strength;
     private int intelligence;
+
+
 
     public string CharacterClassName
     {
@@ -43,6 +57,9 @@ public class BasePlayerClass
         set { intelligence = value; }
     }
 
+
+    //BASE FEATURES
+
     public void Escape()
     {
         //Ability to escape a fight
@@ -51,5 +68,17 @@ public class BasePlayerClass
     public virtual void NormalAttack()
     {
         //Basic Fighting Ability called punching
+        Collider2D[]hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, Range, enemyLayer);
+
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            //Enemy Damaged
+        }
+    }
+
+    public void Guard()
+    {
+        //Ability to defend oneself
+
     }
 }
